@@ -1,0 +1,21 @@
+   # Core de WordPress
+   /wp-admin/
+   /wp-includes/
+   /*.php
+   /license.txt
+   /readme.html
+   /wp-config.php
+   /.htaccess
+
+   # wp-content: solo lo nuestro
+   /wp-content/index.php
+   /wp-content/themes/index.php
+   /wp-content/themes/twenty*/
+   /wp-content/plugins/
+   /wp-content/upgrade/
+   /wp-content/cache/
+   /wp-content/debug.log
+
+   # Sistema
+   .DS_Store
+   Thumbs.db
