@@ -1,5 +1,59 @@
-# Ejercicios
+# Tueste Norte — WordPress
 
-Carpeta para organizar los ejercicios anteriores del proyecto.
+Web de Tueste Norte (tostadero de café de especialidad) montada con WordPress
+en local sobre XAMPP, con child theme de Twenty Twenty-One, blog y fichas de
+café con ACF.
 
-Puedes añadir aquí los archivos o subcarpetas de cada ejercicio.
+## Qué se versiona y qué no
+
+| Se versiona | Por qué |
+|---|---|
+| `wp-content/themes/tueste-norte/` | Es nuestro trabajo (CSS, plantillas, funciones). |
+| `wp-content/uploads/` | Imágenes del contenido; sin ellas la BD enlaza a archivos que no existen. |
+| `wp-content/ejercicios/` | Ejercicios del curso. |
+| `db/tueste-norte.sql` | El contenido (páginas, entradas, ajustes) vive en la BD, no en archivos. |
+| `.gitignore`, `README.md` | Configuración y documentación. |
+
+| No se versiona | Por qué |
+|---|---|
+| Core de WordPress (`wp-admin`, `wp-includes`, `wp-*.php`) | Se descarga oficialmente; subirlo ensucia el repo y desactualiza. |
+| `wp-config.php` | Contiene credenciales de BD y claves secretas, distintas en cada máquina. |
+| `wp-content/plugins/` | Se reinstalan desde el repositorio oficial; aquí se listan versiones. |
+| Temas por defecto, `upgrade/`, `cache/`, `debug.log`, `.htaccess` | Se regeneran o son temporales. |
+
+## Plugins elegidos
+
+- Advanced Custom Fields 
+- Contact Form 7 
+- Flamingo 
+- Yoast SEO 
+
+## Restaurar el proyecto en otra máquina (XAMPP)
+
+1. Instala XAMPP y arranca Apache y MySQL.
+2. Descarga WordPress (es.wordpress.org) y descomprímelo en
+   `C:\xampp\htdocs\tueste-norte-wp\`.
+3. Clona este repo en otra carpeta y copia su `wp-content` sobre el de
+   WordPress, **sustituyéndolo**. También `db/`.
+4. En phpMyAdmin crea la BD `tueste_norte` (utf8mb4_general_ci) e **importa**
+   `db/tueste-norte.sql`.
+5. Copia `wp-config-sample.php` como `wp-config.php` y edita `DB_NAME`
+   (`tueste_norte`), `DB_USER` (`root`), `DB_PASSWORD` (vacía), `DB_HOST`
+   (`localhost`), y añade `define( 'WP_DEBUG', true );`.
+6. Abre `http://localhost/tueste-norte-wp/wp-admin`. Entra en
+   **Plugins → Añadir nuevo**, instala y activa los plugins.
+7. **Ajustes → Enlaces permanentes → Guardar** para regenerar `.htaccess`.
+
+### Si la URL local no coincide
+La URL va guardada en la BD (`siteurl` y `home` en la tabla `wp_options`).
+- Rápido: en `wp-config.php` añade
+  `define( 'WP_HOME', 'http://localhost/OTRA-CARPETA' );` y
+  `define( 'WP_SITEURL', 'http://localhost/OTRA-CARPETA' );`.
+- Si has cambiado el prefijo de tabla, ajústalo en `$table_prefix`.
+
+## Usuarios
+- Administrador: root, contraseña: root.
+- Marta: `marta`, rol Editor.
+
+## Otros ejercicios
+Se incluyen los ejercicios de práctica de la semana 2
