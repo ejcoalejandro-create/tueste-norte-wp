@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tueste Norte - Contacto</title>
+    <link rel="stylesheet" href="ficha-cata.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <h1>Tueste Norte</h1>
+        <p>Escríbenos</p>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contacto">
+            <h2>Formulario de contacto</h2>
+            <p>Déjanos tu nombre, tu correo y lo que quieras contarnos. Te contestamos por email.</p>
+
+            <!-- method="POST" porque enviamos datos que se van a procesar, no una simple consulta.
+                 action="contacto.php" es el script que recibirá y validará los datos. -->
+            <form action="contacto.php" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Tueste Norte — Café de especialidad</p>
+    </footer>
+</body>
+
+</html>

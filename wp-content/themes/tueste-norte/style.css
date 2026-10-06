@@ -1,0 +1,76 @@
+/*
+Theme Name: Tueste Norte
+Template: twentytwentyone
+Description: Child theme de Twenty Twenty-One para Tueste Norte
+Author: Tueste Norte
+Version: 1.0
+Text Domain: tueste-norte
+*/
+
+/* ===== Identidad visual de la landing (semana 1) ===== */
+:root {
+	--global--color-background: #faf6f1;
+	--global--color-primary: #2b1d12;
+	--global--color-secondary: #6b5744;
+	--global--color-primary-hover: #4a3421;
+	--global--font-primary: Georgia, "Times New Roman", serif;
+	--global--font-secondary: Georgia, "Times New Roman", serif;
+}
+
+body {
+	background-color: #faf6f1;
+	color: #2b1d12;
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+a { color: #8a5a2b; }
+a:hover { color: #4a3421; }
+
+.site-header { border-bottom: 1px solid #e0d5c8; }
+
+/* Botones */
+.wp-block-button__link,
+input[type="submit"],
+button {
+	background-color: #2b1d12;
+	color: #faf6f1;
+	border-radius: 4px;
+	border-color: #2b1d12;
+}
+.wp-block-button__link:hover,
+input[type="submit"]:hover,
+button:hover {
+	background-color: #4a3421;
+	color: #faf6f1;
+}
+
+/* Campos de formulario */
+input[type="text"],
+input[type="email"],
+textarea {
+	border: 1px solid #e0d5c8;
+	border-radius: 4px;
+	background: #fff;
+}
+
+/* Pie de página */
+.site-footer {
+	background-color: #2b1d12;
+	color: #e8c39e;
+	padding: 2rem 1rem;
+}
+.site-footer a { color: #e8c39e; }
+
+/* ===== Ficha de café ===== */
+.ficha-cafe {
+	background: #fff;
+	border: 1px solid #e0d5c8;
+	border-radius: 8px;
+	padding: 1.25rem;
+	margin: 1.5rem 0;
+}
+.ficha-cafe dl { margin: 0; }
+.ficha-cafe dt { font-weight: bold; margin-top: 0.75rem; }
+.ficha-cafe dt:first-child { margin-top: 0; }
+.ficha-cafe dd { margin: 0; }
+.ficha-cafe .ficha-precio { font-size: 1.25rem; font-weight: bold; }

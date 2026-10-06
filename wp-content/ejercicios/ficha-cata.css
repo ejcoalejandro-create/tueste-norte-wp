@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Base ===== */
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #2b1d12;
+    /* marrón café oscuro */
+    background-color: #faf6f1;
+    /* crema */
+    line-height: 1.6;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+/* ===== Cabecera ===== */
+.cabecera {
+    background-color: #2b1d12;
+    color: #faf6f1;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.cabecera nav {
+    display: flex;
+    flex-wrap: wrap;
+    /* así los enlaces bajan de línea en pantallas estrechas en vez de desbordar */
+    justify-content: center;
+    gap: 1rem 1.5rem;
+    margin-top: 1rem;
+}
+
+.cabecera a {
+    color: #e8c39e;
+    /* tono café con leche para los enlaces */
+}
+
+/* ===== Contenido principal ===== */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    /* centra el bloque horizontalmente */
+    padding: 2rem 1rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+section p {
+    max-width: 68ch;
+    /* líneas de texto más cortas y fáciles de leer */
+}
+
+/* ===== Tarjetas de café (grid adaptable) ===== */
+#cafes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+#cafes h2 {
+    grid-column: 1 / -1;
+    /* el título ocupa todas las columnas */
+}
+
+.cafe {
+    background-color: #fff;
+    border: 1px solid #e0d5c8;
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+.cafe-origen {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #8a6a4e;
+    margin-bottom: 0.5rem;
+}
+
+.precio {
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+/* ===== Bloque de detalles de la cata (se muestra/oculta con JS) ===== */
+#detalles-cata {
+    margin-top: 1.25rem;
+    padding: 1.25rem;
+    background-color: #fff;
+    border: 1px solid #e0d5c8;
+    border-radius: 8px;
+}
+
+#detalles-cata p+p {
+    margin-top: 0.5rem;
+}
+
+/* Estado oculto: el JS añade/quita esta clase con classList.toggle() */
+.oculto {
+    display: none;
+}
+
+/* ===== Mensaje de confirmación de la suscripción ===== */
+#mensaje-suscripcion {
+    margin-top: 1rem;
+    font-weight: bold;
+    min-height: 1.5em;
+    /* reserva el espacio para que el botón no salte al aparecer el texto */
+}
+
+/* ===== Formulario ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    /* etiquetas y campos en columna */
+    gap: 0.5rem;
+    max-width: 480px;
+}
+
+input,
+textarea {
+    padding: 0.6rem;
+    border: 1px solid #e0d5c8;
+    border-radius: 4px;
+    font: inherit;
+    /* hereda la tipografía del body */
+}
+
+/* ===== Botones (los del formulario y los sueltos de la página) ===== */
+button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #2b1d12;
+    color: #faf6f1;
+    font: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4a3421;
+    /* feedback visual al pasar el ratón */
+}
+
+/* ===== Pie ===== */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #6b5744;
+}
+
+footer a {
+    color: inherit;
+}
+
+footer p+p {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+}

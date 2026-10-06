@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tueste Norte - Apúntate a la cata</title>
+    <link rel="stylesheet" href="ficha-cata.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <h1>Tueste Norte</h1>
+        <p>Apúntate a la próxima cata</p>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="#cata">Cata</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cata">
+            <h2>Reserva tu plaza</h2>
+            <p>Rellena tus datos y te reservamos sitio en la próxima cata mensual.</p>
+
+            <!-- method="POST" porque estamos enviando datos que crean una reserva,
+                 no una simple consulta (que iría mejor con GET).
+                 action="Cata.php" es el script que recibirá y validará los datos. -->
+            <form action="Cata.php" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="plazas">Número de plazas (1 a 4):</label>
+                <input type="number" id="plazas" name="plazas" min="1" max="4" required>
+
+                <button type="submit">Reservar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Tueste Norte — Café de especialidad</p>
+    </footer>
+</body>
+
+</html>

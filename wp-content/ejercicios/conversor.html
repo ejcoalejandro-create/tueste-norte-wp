@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tueste Norte - Conversor de precios</title>
+    <link rel="stylesheet" href="ficha-cata.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <h1>Tueste Norte</h1>
+        <p>Conversor de precio por kilo</p>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="#conversor">Conversor</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="conversor">
+            <h2>Calcula el precio por kilo</h2>
+            <p>Introduce el precio de un paquete de 250 g y te decimos cuánto sale el kilo.</p>
+
+            <!-- Usamos un form (no para enviarlo a ningún sitio, solo para heredar
+                 el estilo de columna/espaciado que ya define ficha-cata.css) -->
+            <form>
+                <!-- Campo numérico donde el usuario escribe el precio del paquete de 250 g -->
+                <label for="precio-paquete">Precio del paquete de 250 g (€):</label>
+                <input type="number" id="precio-paquete" step="0.01" min="0" placeholder="Ej: 4,25">
+
+                <!-- type="button" evita que se envíe el formulario o se recargue la página -->
+                <button type="button" id="btn-calcular">Calcular</button>
+            </form>
+
+            <!-- Párrafo vacío donde el JS escribirá el resultado o el aviso -->
+            <p id="resultado"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Tueste Norte — Café de especialidad</p>
+    </footer>
+
+    <!-- Cargamos el script al final del body para que el HTML ya exista cuando se ejecute -->
+    <script src="conversor.js"></script>
+</body>
+
+</html>

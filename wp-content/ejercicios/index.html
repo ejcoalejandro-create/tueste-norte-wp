@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tueste Norte - Café de especialidad</title>
+    <link rel="stylesheet" href="ficha-cata.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <h1>Tueste Norte</h1>
+        <p>Café de especialidad, tostado en pequeñas tandas</p>
+        <nav>
+            <a href="#nosotros">Quiénes somos</a>
+            <a href="#cafes">Cafés</a>
+            <a href="#catas">Catas</a>
+            <a href="#suscripcion">Suscripción</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ===== Quiénes somos ===== -->
+        <section id="nosotros">
+            <h2>Quiénes somos</h2>
+            <p>
+                Somos un tostadero pequeño. Traemos café verde de distintos países, lo tostamos nosotros
+                mismos en tandas cortas y lo vendemos recién hecho. Preferimos tener pocos cafés y
+                conocerlos bien, para poder contarte qué esperar de cada uno antes de que lo pruebes.
+            </p>
+        </section>
+
+        <!-- ===== Cafés de origen ===== -->
+        <section id="cafes">
+            <h2>Nuestros cafés de origen</h2>
+            <!-- Cada café es un article: tiene sentido por sí solo -->
+            <article class="cafe">
+                <h3>Amanecer</h3>
+                <p class="cafe-origen">Etiopía — Yirgacheffe</p>
+                <p>Jazmín, bergamota y un final largo que recuerda al té negro.</p>
+                <p class="precio">12,50 € / 250 g</p>
+            </article>
+            <article class="cafe">
+                <h3>Tierra Alta</h3>
+                <p class="cafe-origen">Colombia — Huila</p>
+                <p>Caramelo, manzana roja y un cacao suave de fondo.</p>
+                <p class="precio">10,90 € / 250 g</p>
+            </article>
+            <article class="cafe">
+                <h3>Fondo de Casa</h3>
+                <p class="cafe-origen">Brasil — Cerrado</p>
+                <p>Chocolate con leche, avellana tostada y cuerpo untuoso.</p>
+                <p class="precio">9,50 € / 250 g</p>
+            </article>
+            <article class="cafe">
+                <h3>Ceniza Volcánica</h3>
+                <p class="cafe-origen">Guatemala — Antigua</p>
+                <p>Especias dulces, ciruela madura y un ligero toque ahumado.</p>
+                <p class="precio">11,20 € / 250 g</p>
+            </article>
+        </section>
+
+        <!-- ===== Catas mensuales ===== -->
+        <section id="catas">
+            <h2>Catas mensuales</h2>
+            <p>Una vez al mes abrimos la tienda por la tarde para catar juntos varios cafés. No hace falta
+                saber nada de café, solo tener curiosidad.</p>
+
+            <!-- Botón que muestra/oculta los detalles con JS (interacción seleccionar -> escuchar -> reaccionar) -->
+            <button type="button" id="btn-detalles-cata" aria-expanded="false" aria-controls="detalles-cata">
+                Ver detalles de la próxima cata
+            </button>
+
+            <div id="detalles-cata" class="oculto">
+                <p><strong>Cuándo:</strong> último jueves de cada mes, 19:00 h.</p>
+                <p><strong>Dónde:</strong> en la propia tienda, plazas limitadas.</p>
+                <p><strong>Precio:</strong> 8 € por persona, incluye los cafés catados.</p>
+            </div>
+
+            <p>
+                <a href="Cata.html"><button type="button">Apúntate a la cata</button></a>
+            </p>
+        </section>
+
+        <!-- ===== Suscripción ===== -->
+        <section id="suscripcion">
+            <h2>Suscripción de café a casa</h2>
+            <p>Estamos dando vueltas a montar una suscripción para enviarte café recién tostado cada mes.
+                Todavía no está en marcha, pero si te interesa, dínoslo y serás de los primeros en enterarte.</p>
+
+            <button type="button" id="btn-suscripcion">Me interesa la suscripción</button>
+            <p id="mensaje-suscripcion" aria-live="polite"></p>
+        </section>
+
+        <!-- ===== Contacto ===== -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>¿Tienes alguna duda o quieres decirnos algo? Escríbenos.</p>
+            <a href="contacto.html"><button type="button">Ir al formulario de contacto</button></a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Tueste Norte — Café de especialidad</p>
+        <p><a href="conversor.html">Herramienta interna: conversor de precio por kilo</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
