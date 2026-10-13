@@ -1,0 +1,144 @@
+/*
+Theme Name: Tueste Norte Tema
+Description: Tema propio de Tueste Norte, hecho desde cero.
+Author: Tu nombre
+Version: 1.0.0
+Requires at least: 6.0
+Requires PHP: 7.4
+Text Domain: tueste-norte
+*/
+
+:root {
+	--cafe: #2b1d12;
+	--crema: #faf6f1;
+	--borde: #e0d5c8;
+	--acento: #b4541a;
+	--pizarra: #23302b;
+	--tiza: #f4efe6;
+	--fuente: Georgia, "Times New Roman", serif;
+	--fuente-tiza: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+	margin: 0;
+	background: var(--crema);
+	color: var(--cafe);
+	font-family: var(--fuente);
+	line-height: 1.65;
+}
+a { color: var(--acento); }
+img { max-width: 100%; height: auto; }
+
+/* Cabecera */
+.cabecera {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 1.5rem 1.5rem 1rem;
+	border-bottom: 4px solid var(--cafe);
+}
+.cabecera__marca {
+	font-size: 1.75rem;
+	font-weight: bold;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--cafe);
+	text-decoration: none;
+}
+.cabecera__menu ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.25rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.cabecera__menu a {
+	color: var(--cafe);
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+}
+.cabecera__menu a:hover,
+.cabecera__menu .current-menu-item a { border-bottom-color: var(--acento); }
+
+/* Contenido */
+.contenido { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+.titulo-pagina { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; margin: 0 0 1rem; }
+.texto > * + * { margin-top: 1rem; }
+.meta { color: #6b5744; }
+
+/* Pizarra: el tueste de la semana */
+.pizarra {
+	margin-bottom: 2.5rem;
+	padding: 1.5rem 2rem;
+	background: var(--pizarra);
+	color: var(--tiza);
+	border: 10px solid #8a5a2b;
+	border-radius: 6px;
+	font-family: var(--fuente-tiza);
+}
+.pizarra__etiqueta {
+	margin: 0;
+	font-size: 0.85rem;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	opacity: 0.8;
+}
+.pizarra__titulo { margin: 0.25rem 0 0.5rem; font-size: 2rem; }
+.pizarra a { color: var(--tiza); }
+
+/* Catálogo */
+.cafes-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	gap: 1.5rem;
+}
+.cafe-tarjeta {
+	background: #fff;
+	border: 1px solid var(--borde);
+	padding: 1.25rem;
+}
+.cafe-tarjeta__titulo { margin: 0.5rem 0 0.25rem; font-size: 1.4rem; }
+.cafe-tarjeta__titulo a { color: var(--cafe); text-decoration: none; }
+.cafe-tarjeta__origen { margin: 0; color: #6b5744; }
+.cafe-tarjeta__precio { margin: 0.5rem 0 0; font-weight: bold; }
+.cafe-tarjeta.es-tueste-semana { border: 2px solid var(--acento); }
+.cafe-tarjeta.es-tueste-semana::before {
+	content: "Tueste de la semana";
+	display: inline-block;
+	margin-bottom: 0.75rem;
+	padding: 0.15rem 0.6rem;
+	background: var(--pizarra);
+	color: var(--tiza);
+	font-size: 0.75rem;
+}
+
+/* Ficha de un café */
+.ficha { margin: 1.5rem 0; padding: 1.25rem; background: #fff; border: 1px solid var(--borde); }
+.ficha dt { margin-top: 0.75rem; font-weight: bold; }
+.ficha dt:first-child { margin-top: 0; }
+.ficha dd { margin: 0; }
+.ficha__precio { font-size: 1.25rem; font-weight: bold; }
+
+/* Formularios (Contact Form 7) */
+input[type="text"], input[type="email"], textarea {
+	width: 100%;
+	padding: 0.6rem;
+	border: 1px solid var(--borde);
+	font: inherit;
+}
+input[type="submit"] {
+	padding: 0.7rem 1.5rem;
+	border: 0;
+	background: var(--cafe);
+	color: var(--crema);
+	font: inherit;
+	cursor: pointer;
+}
+
+/* Pie */
+.pie { padding: 1.5rem; border-top: 4px solid var(--cafe); text-align: center; color: #6b5744; }
