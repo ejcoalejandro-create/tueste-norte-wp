@@ -5,7 +5,9 @@
 /.htaccess
 
 # Plugins y caché de WordPress
-/wp-content/plugins/
+/wp-content/plugins/*
+!/wp-content/plugins/tueste-norte-cafes/
+!/wp-content/plugins/tueste-norte-tueste-semana/
 /wp-content/upgrade/
 /wp-content/cache/
 /wp-content/debug.log
