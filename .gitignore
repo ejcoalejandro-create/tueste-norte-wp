@@ -17,6 +17,8 @@
 /wp-content/upgrade/
 /wp-content/cache/
 /wp-content/debug.log
+/wp-content/debug.log
+/wp-content/uploads/wpcf7_uploads/
 
 # Sistema
 .DS_Store
