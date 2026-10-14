@@ -1,10 +1,16 @@
-# WordPress core
+# Core de WordPress
 /wp-admin/
 /wp-includes/
+/*.php
+/license.txt
+/readme.html
 /wp-config.php
 /.htaccess
 
-# Plugins y caché de WordPress
+# wp-content: solo lo nuestro
+/wp-content/index.php
+/wp-content/themes/index.php
+/wp-content/themes/twenty*/
 /wp-content/plugins/*
 !/wp-content/plugins/tueste-norte-cafes/
 !/wp-content/plugins/tueste-norte-tueste-semana/
