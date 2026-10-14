@@ -19,6 +19,7 @@
 /wp-content/debug.log
 /wp-content/debug.log
 /wp-content/uploads/wpcf7_uploads/
+/wp-content/languages/
 
 # Sistema
 .DS_Store
